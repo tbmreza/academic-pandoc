@@ -10,7 +10,7 @@ format:
     toc: true
   docx:
     output-file: article.docx
-    toc: true
+    toc: false
   pdf:
     output-file: article.pdf
     pdf-engine: xelatex

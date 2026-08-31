@@ -1,10 +1,10 @@
-title: Title
-subtitle: Subtitle
+title: System Request Document
+subtitle: Skin Analyzer ... for brands
 author:
-  - Eleanor Roosevelt
-  - John Peters Humphrey
-date: 1 January 2023
-abstract: All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights.
+  - "Requirements Analysis, Design and Implementation of Information Systems: Assignment 1"
+  - Tb M Reza Handzalah
+date: 8 September 2026
+# abstract: All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights.
 bibliography: references.bib
 csl: ../assets/csl/chicago-note-bibliography.csl
 nocite: |
@@ -20,7 +20,7 @@ references:
     title: Universal Declaration of Human Rights
     type: book
 keywords: [keyword1, keyword2]
-toc-title: Contents
-toc-depth: 2
+# toc-title: Contents
+# toc-depth: 2
 abstract-title: Abstract
 thanks: Many thanks for the valuable comments.
