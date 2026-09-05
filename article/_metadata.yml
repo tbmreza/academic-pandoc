@@ -1,5 +1,5 @@
 title: System Request Document
-subtitle: Skin Analyzer ... for brands
+subtitle: Computer Vision Engine Instrumentation for IT Department of PT Paragon Technology & Innovation
 author:
   - "Requirements Analysis, Design and Implementation of Information Systems: Assignment 1"
   - Tb M Reza Handzalah
@@ -10,15 +10,15 @@ csl: ../assets/csl/chicago-note-bibliography.csl
 nocite: |
   @brown2016
 references:
-  - id: unitednations1948
-    author:
-      - literal: United Nations
-    citation-key: unitednations1948
-    issued:
-      - year: 1948
-        month: 12
-    title: Universal Declaration of Human Rights
-    type: book
+  # - id: unitednations1948
+  #   author:
+  #     - literal: United Nations
+  #   citation-key: unitednations1948
+  #   issued:
+  #     - year: 1948
+  #       month: 12
+  #   title: Universal Declaration of Human Rights
+  #   type: book
 keywords: [keyword1, keyword2]
 # toc-title: Contents
 # toc-depth: 2

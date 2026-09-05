@@ -11,3 +11,31 @@ header ul a:hover,
 header ul a:focus {
 	font-weight: normal;
 }
+
+.interview {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.interviewer,
+.interviewee {
+  max-width: 75%;
+}
+
+.interviewer {
+  align-self: flex-start;
+  text-align: left;
+}
+
+.interviewee {
+  align-self: flex-end;
+  text-align: left;
+}
+
+.interviewer p:first-child,
+.interviewee p:first-child {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}

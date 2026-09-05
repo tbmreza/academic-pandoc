@@ -1,0 +1,28 @@
+Halo selamat siang Mas Gia
+Halo selamat siang Mas Reza
+
+Iya Mas, mungkin pertama aku konfirmasi dulu Mas Gia ini adalah Technology Produk Officer ya di IT Paragon
+Iya betul, teknologi produk owner di Paragon
+Oh mohon maaf, Owner ya, oke aku mau mulai dengan pertanyaan pertama, Mas. Bagaimana sebenarnya visi dari Computer Vision Engine ini, mungkin dari segi impact dan scopenya
+
+Iya CV Engine itu nanti akan dibangun sebagai salah satu building block Untuk kita bisa menghasilkan suatu rekomendasi produk yang lebih akurat ya. Jadinya, misal customer melakukan scanning wajah gitu ya. Itu harapannya nanti Vision Engine itu akan meng-capture dan menganalisa dengan lebih akurat secara terus menerus, artinya terus menerus kita akan improvement dengan retraining model. Kemudian kita pertajam dari sisi analisa. Tidak hanya dari sisi bentuk wajah, tapi juga dari warna kulit, external factor Contohnya misal UV Index, humidity, dan lain-lain. Nah ini harapannya sebenarnya Vision Engine itu akan membantu kita bisa men-shaping ke customer yang lebih segmented dan targeted. Dan akhirnya nanti produk recommendation yang kita berikan itu memang yang men-solve dan meng-capture isu dari customer itu sendiri. Nah dan harapannya lagi sebenarnya kalau bicara bisnis impactnya ya, kita bisa membuat sesuatu seperti system as a service juga yang nanti bisa kita jual di luar Paragon, yang harapannya nanti akan membawa revenue baru di luar Paragon itu sendiri. Paling mungkin dari aku secara vision-nya itu seperti itu ya
+
+Baik, untuk awal, project, event, atau brand apa aja mas sudah terlihat akan menggunakan engine-nya
+
+Ya kalau untuk project, event, dan brand itu mungkin hampir semua yang akan menggunakan CV Engine ini ya. Mungkin kita akan coba piloting dari beberapa event terlebih dahulu gitu ya. Nah misalnya contohnya event di Wardah ada A.M. Club, nah dia bisa jadi salah satu piloting untuk kita melakukan proses Vision Engine ini. Harapannya sih nanti kita gradually ya, improve dan expand gitu Misalnya dari sisi piloting itu sudah oke Kita coba mulai approach ke existing-existing platform kita ya Yang sudah di brand-brand atau di event-event Mungkin harapannya kita bisa nge-replace yang vendor pernah kerjakan. Jadi semua proses dan data owningnya itu di kita Harapannya sih seperti itu, Mas Reza
+
+Baik Mas. Kemudian Sebenarnya wawancara ini itu dalam rangka saya itu akan mem-propose sebuah sistem observability seperti itu Mas Untuk diterapkan di engine-nya yang baru nanti. Nah Yang saya mau bertanya, Apakah membagikan video usage dari sistem saya itu yang artinya mungkin menunjukkan data aktual gitu ya dari pengguna-pengguna enginee yang baru itu keluar lingkungan perusahaan apakah dibolehkan, Mas?
+
+Ya kalau untuk simulasi ya Simulasi dan juga video Dari sisi performance kita itu dibolehkan Mas, Selama itu bukan data customer ya Dan juga data produk-produk sensitif kita Itu dibolehkan Mas
+
+Baik, terima kasih Mas. Kemudian pertanyaan terakhir, setelah ini saya akan melakukan juga wawancara dengan stakeholder Yaitu mungkin dari sisi engineeringnya Yang akan menjadi pengguna langsung dari sistem yang akan saya buat begitu. Nah apabila proposal saya nanti dinilai feasible, sponsorship atau dukungan apa saja yang mungkin Mas berikan ya Untuk pengembangan sistem saya? Kalau mungkin secara secara poin-poin itu saya membutuhkan pertama Boleh mengakses API engine yang baru Mungkin diperbolehkan untuk tidak dibilling atau tanpa berbayar begitu Lalu mungkin kedua Kami akan butuh bertanya-tanya yang dalam hal ini konsultasi begitu Yang profesional dengan internal experts. Mungkin kalau di estimasi sampai dengan akhir proyek atau akhir tahun ini Kira-kira setengah sampai satu jam seperti itu Mas. Nah untuk dua hal tersebut Apakah mungkin untuk diberikan?
+
+Ya Kalau untuk yang poin satu Nanti kita bisa coba Berikan aksesnya ya. Mungkin nanti bisa Ada beberapa Ini juga ya beberapa kriteria juga ya Yang penting sebenarnya kan Kita tidak mengakses data customer aja. Yang kedua untuk subject matter expert pun sebenarnya Dari sisi kita juga Ada yang mungkin lebih ahli ya dari penggunaan computer vision Misalnya contohnya kayak Kayak Risman gitu ya Atau Mungkin Mas Redha gitu ya Di level Yang lebih atas Nah itu Mungkin mereka bisa lebih expert ya Untuk dijadikan sebagai Konsultasi gitu
+
+Baik Terima kasih Kalau begitu, boleh saya Konfirmasi Akan didukung lah ya Untuk setidaknya dua Tadi itu Dan mungkin akan diarahkan ke Expert Yang Lebih expert tadi ya Dengan Pak Risman dan Mas Redha
+
+Ya betul
+
+Oke Selanjutnya Boleh dikonfirmasi Mas Ini nanti itu Akan estimasinya Secara roadmap Di Q4 Tahun ini kah Atau seperti apa Mas?
+
+Ya Nanti kita Akan mulai start dari Q3 sekarang. Dan harapannya di Q4 itu kita udah bisa cover hampir semua brand ya Menggunakan existing platform kita gitu. Mungkin secara milestone Seperti itu ya Mas Reza
