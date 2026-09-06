@@ -6,9 +6,10 @@ author:
 date: 8 September 2026
 # abstract: All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights.
 bibliography: references.bib
-csl: ../assets/csl/chicago-note-bibliography.csl
-nocite: |
-  @brown2016
+# csl: ../assets/csl/chicago-note-bibliography.csl
+csl: ../assets/csl/apa.csl
+# nocite: |
+#   @brown2016
 references:
   # - id: unitednations1948
   #   author:

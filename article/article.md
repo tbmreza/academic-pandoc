@@ -4,11 +4,13 @@
 
 PT Paragon Technology & Innovation is a beauty and personal-care company founded in 1985 that develops, manufactures, markets, and distributes cosmetics, skincare, haircare, and related products. The company employs more than 14,000 people and operates an extensive distribution network across Indonesia and Malaysia. Its brand portfolio includes Wardah, Make Over, Emina, Kahf, Putri, Crystallure, Instaperfect, Labore, Biodef, Tavi, Wonderly, OMG, Beyondly, Earth Love Life, and DSE Dermascalp Expert. Paragon expanded its presence through local distributors and major retail networks such as Watsons and Guardian.
 
-The company is strengthening its competitive advantage by moving beyond the simple purchase of emerging AI technologies and investing in the development of its own Computer Vision Engine.
+Paragon is strengthening its competitive advantage by moving beyond the simple purchase of emerging AI technologies and investing in the development of its own Computer Vision Engine.
 By building this capability in-house, the company can tailor AIs to its specific business needs, retain greater control over proprietary data and intellectual property.
-Computer vision, a branch of AI that enables systems to interpret images
-and video, can support applications such as
-virtual try-on experience^[https://vto.wardahbeauty.com/], and in turn, product recommendations.
+Computer Vision (CV), a branch of AI that enables systems to interpret images
+and video,
+powers Paragon's experience applications such as
+Virtual Try-On experience^[https://vto.wardahbeauty.com/].
+Strategically, fast-moving consumer goods companies invest in such consumer experiences for practical marketing purposes.
 
 
 <!-- This shift reflects a broader transformation from being only a consumer of external AI solutions into an organization capable of creating core AI infrastructure -->
@@ -20,26 +22,24 @@ virtual try-on experience^[https://vto.wardahbeauty.com/], and in turn, product 
 
 ## Assignment Topic Fitness
 
-<!-- ??: edit section -->
 This proposal satisfies the brief's requirement to incorporate emerging digital technologies because
-OpenTelemetry represents the current industry-standard convergence point for observability tooling: it
-is a CNCF graduated project, vendor-neutral by design, and increasingly the default instrumentation layer that cloud providers, APM vendors,
-and ML platforms are converging around, replacing the fragmented, proprietary tracing SDKs of the previous decade.
+implementing instrumentation layer to an in-house CV is 
+a genuinely current problem rather than a generic IT solution exercise. CV services have workload characteristics that
+traditional web services don't naturally demand, so extending its
+conventions into an observability dashboard demonstrates technical currency while seizing cost-saving opportunity.
 
-Applying it specifically to a computer vision
-inference pipeline is a genuinely current problem space rather than a generic instrumentation exercise — CV and ML services have workload characteristics that
-traditional web-service observability doesn't naturally cover (GPU device attribution, model versioning, per-stage tensor processing latency), so extending OTel's
-semantic conventions into a cv.* namespace demonstrates both technical currency and the ability to adapt an emerging standard to a domain that hasn't yet been fully
-standardized.
-
-Combined with the Collector's role in sampling, enrichment, and PII redaction before data reaches any backend, the proposal also touches on responsible-AI-adjacent
-data governance concerns that IT departments are increasingly expected to address, which strengthens the case that this is an innovative, forward-looking system design rather
-than a routine monitoring add-on.
+<!-- Applying it specifically to a computer vision -->
+<!-- inference pipeline is -->
+<!-- standardized. -->
+<!---->
+<!-- Combined with the Collector's role in sampling, enrichment, and PII redaction before data reaches any backend, the proposal also touches on responsible-AI-adjacent -->
+<!-- data governance concerns that IT departments are increasingly expected to address, which strengthens the case that this is an innovative, forward-looking system design rather -->
+<!-- than a routine monitoring add-on. -->
 
 ## Support Manifestation
 
-We identified 2 primary stakeholders for sponsorship of this system proposal document: Technology Product Owner and Engineering Manager.
-As project initiator, I have secured verbal agreement for the following needed support points, evidence available in the appendices.
+I identified 2 primary stakeholders for sponsorship of this system request document: Technology Product Owner and Engineering Manager.
+As project initiator, I have secured verbal agreement for the following support points, evidence available in the appendices.
 
 + Access to the CV Engine API (free of charge)
 + Consultation with internal experts (monthly until end of year, 30–60 minutes each session)
@@ -49,13 +49,19 @@ As project initiator, I have secured verbal agreement for the following needed s
 # Business Needs
 
 ## Problems
-We interviewed our proposed system's projected primary user. 
-The following table summarizes the profile of relevant Engineering Manager for the system we propose.
+I interviewed our proposed system's projected primary user. 
+The following table summarizes the profile of relevant Engineering Manager.
 
-| ![](images/figma.png){width=600}  |
+| ![](images/figma.png){width=100%}  |
 |-----------------------------------|
 | Contact: adinda.gdshinta@paracorpgroup.com |
 : User Persona {#tbl-persona}
+
+The interview captured a rather abstract problem:
+
+> _Kita tau tim bisnis akan nanya "bisa dibuat lebih akurat, cepat, atau lebih murah lagi kah, mbak," cepat atau lambat. Tim engineering sih akan berusaha sebaik mungkin aja untuk menuhinnya nanti. Dan bukan tugas tim engineering untuk bikin business-case sebelum ngoding apa yang engineer pengen bikin, way of working-nya tidak seperti itu._
+
+<!-- ??: konsisten dgn transcript -->
 
 ## Opportunities
 
@@ -71,7 +77,12 @@ Based on recent engineering blog posts, several organizations report measurable 
 # Business Requirements
 
 ## User Story
-As an IT operations engineer responsible for the department's computer vision services, I want end-to-end tracing and standardized metrics across the inference pipeline, so that when a request runs slow or returns an unexpected result, I can see exactly which stage introduced the delay or failure, instead of guessing from application logs alone. Today, when an external vendor or integrator reports that inference results look off for a batch of images, there is no way to correlate a single request across the pipeline layers.
+
+**_As_** an IT operations engineer responsible for the department's computer vision services,
+
+**_I want_** end-to-end tracing and standardized metrics across the inference pipeline,
+
+**_so that_** when a request runs slow or returns an unexpected result, I can see exactly which stage introduced the delay or failure, instead of guessing from application logs alone. Today, when an external vendor or integrator reports that inference results look off for a batch of images, there is no way to correlate a single request across the pipeline layers.
 
 ## Deliverable
 
@@ -80,7 +91,7 @@ As an IT operations engineer responsible for the department's computer vision se
 
 
 # Business Value
-We approximate expected monetary valuation of our proposed system in 2 analyses: value of having observability (versus not having observability at all) and value of avoiding external service expenses (versus spending on a benchmark external service).
+I approximate expected monetary valuation of our proposed system in 2 analyses: value of having observability (versus not having observability at all) and value of avoiding external service expenses (versus spending on a benchmark external service).
 ## Opportunity Cost of Having Observability
 ### Assumptions
 
@@ -100,10 +111,10 @@ We approximate expected monetary valuation of our proposed system in 2 analyses:
 
 ## Opportunity Cost of Subscribing to Observability as a Service
 A more fair comparison requires a complete list of features that CV Engine would want from an observability platform.
-Such list is not available at this stage of the roadmap, so for the purpose of concretizing the monetary cost of subscribing to a service of its kind, we pick Datadog as a representative popular benchmark.
+Such list is not available at this stage of the roadmap, so for the purpose of concretizing the monetary cost of subscribing to a service of its kind, I pick Datadog as a representative popular benchmark.
 
 ### 2026 Benchmark External Service Pricelist
-We looked at Datadog's pricing page^[https://www.datadoghq.com/pricing/?site=ap2].
+I looked at Datadog's pricing page^[https://www.datadoghq.com/pricing/?site=ap2].
 
 | Parameter | Value | Remarks |
 |---|---:|---|
@@ -111,92 +122,23 @@ We looked at Datadog's pricing page^[https://www.datadoghq.com/pricing/?site=ap2
 | Pricing Plan | Enterprise | Datadog provides 4-level non-free plans, Enterprise is level 2 |
 | Price | USD 27.60 per month | USD 27.60 * 12 months = USD 331.2 annually |
 
-<!-- ## Value of Having Observability -->
-<!-- ## Monetary Valuation -->
-
-<!-- We estimated the monetary valuation of our proposed system in 2 separate parts: value of having observability and value of avoiding external service expenses. -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Special Issues
-We complete our system request proposal by listing issues worth anticipating.
+I complete our system request proposal by listing issues worth anticipating.
 
 ### Implications
 
-+ Application performance overhead: (need citation for "apm implementing software induces performance overhead")
++ **Application performance overhead:**
+Studies of instrumentation overhead are often conducted within a specific language ecosystem and its corresponding observability frameworks. For example, @Reichelt2026BenchmarkingTO evaluates seven distributed-tracing frameworks in the Java ecosystem (including OpenTelemetry) and reports significant differences in their performance overhead. However, regardless of the relative efficiency of individual frameworks, the study establishes the more fundamental point relevant to this work: instrumentation is not overhead-free.
 
 ### Critical Success Factors
 
-+ Discipline from application developers and integrators: (need citation for "maintaining apm log statements requires discipline")
-+ Business-level demand for system optimizations: (need citation for "system optimization requests are more and more shifting from technical-level demand to business-level demand")
++ **Discipline from application developers and integrators:**
+Maintaining application logging requires ongoing discipline, as modifications to log statements can affect downstream log analysis. A systematic mapping study of logging practices from @gu2022logging identified _maintenance barriers_ as a major issue, reported across over 17% of its primary studies. Such modifications can also introduce errors into the main system, increasing the overall cost over time.
+
++ **Business-level demand for system optimizations:**
+Without sustained stakeholder demand to do concrete system optimizations, the overhead outweighs its practical utility.
 
 
-<!-- ## Quotes -->
-<!---->
-<!-- ::: {lang=de} -->
-<!---->
-<!-- > Alle Menschen sind frei und gleich an Würde und Rechten geboren. -->
-<!---->
-<!-- ::: -->
-<!---->
-<!-- All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. -->
-<!---->
-<!-- ## Scientific citations -->
-<!---->
-<!-- > All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood. @unitednations1948 -->
-<!---->
-<!-- All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights.[@unitednations1948] -->
-<!---->
 # References
 
 ::: {#refs}
@@ -236,35 +178,6 @@ The first question set confirms whether our proposal is feasible in terms of sco
 | **[I]** Oke Selanjutnya Boleh dikonfirmasi Mas Ini nanti itu Akan estimasinya Secara roadmap Di Q4 Tahun ini kah Atau seperti apa Mas? | |
 | | **[TPO]** Ya Nanti kita Akan mulai start dari Q3 sekarang. Dan harapannya di Q4 itu kita udah bisa cover hampir semua brand ya Menggunakan existing platform kita gitu. Mungkin secara milestone Seperti itu ya Mas Reza |
 
-
-<!-- ::: {.interview} -->
-<!---->
-<!-- ::: {.interviewer} -->
-<!-- **Interviewer** -->
-<!---->
-<!-- How do you currently identify performance bottlenecks? -->
-<!-- ::: -->
-<!---->
-<!-- ::: {.interviewee} -->
-<!-- **Engineering Manager** -->
-<!---->
-<!-- Usually through application logs. But the logs don't give us enough -->
-<!-- information to pinpoint the issue. -->
-<!-- ::: -->
-<!---->
-<!-- ::: {.interviewer} -->
-<!-- **Interviewer** -->
-<!---->
-<!-- What would you need to diagnose the problem more effectively? -->
-<!-- ::: -->
-<!---->
-<!-- ::: {.interviewee} -->
-<!-- **Engineering Manager** -->
-<!---->
-<!-- We'd need visibility into the different stages of the pipeline. -->
-<!-- ::: -->
-<!---->
-<!-- ::: -->
 
 <!-- Bagaimana visi dari CV Engine ini dari segi impact dan scope-nya? -->
 <!---->
