@@ -11,7 +11,9 @@ format:
   docx:
     output-file: article.docx
     toc: false
-    reference-doc: reference.docx
+    filters:
+      - landscape.lua
+    # reference-doc: reference.docx
   pdf:
     output-file: article.pdf
     pdf-engine: xelatex

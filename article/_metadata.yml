@@ -1,12 +1,14 @@
-title: System Request Document
-subtitle: Computer Vision Engine Instrumentation for IT Department of PT Paragon Technology & Innovation
+title: "Requirements Analysis, Design and Implementation of Information Systems"
+subtitle: AI-Powered Digital Twin untuk Simulasi Environment Pengujian pada Platform Integrasi dan API Management (PT Mitra Integrasi Informatika)
 author:
-  - "Requirements Analysis, Design and Implementation of Information Systems: Assignment 1"
-  - Tb M Reza Handzalah
-date: 9 September 2026
+  - Adryan Rizky Alviano - 2606769261
+  - Fatimah Zahra - 2606845642
+  - Sarah H M Siahaan - 2606846241
+  - Tb M Reza Handzalah - 2606769961
+
+date: 23 September 2026
 # abstract: All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights. All human beings are born free and equal in dignity and rights.
 bibliography: references.bib
-# csl: ../assets/csl/chicago-note-bibliography.csl
 csl: ../assets/csl/apa.csl
 # nocite: |
 #   @brown2016
