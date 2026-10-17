@@ -1,8 +1,8 @@
 SHELL := /bin/bash
 
-MD      := draft.md
+MD      := Edit-Here.md
 OUT     := out
-DOCX    := $(OUT)/$(MD:.md=.docx)
+DOCX    := $(OUT)/Mandat_2026SC_06.docx
 BIB     := references.bib
 CSL     := ../assets/csl/apa.csl
 FIGURES := $(wildcard figures/*)
@@ -11,9 +11,9 @@ FIGURES := $(wildcard figures/*)
 
 build: $(DOCX)
 
-$(OUT)/%.docx: %.md reference.docx landscape.lua $(BIB) $(CSL) $(FIGURES)
+$(DOCX): $(MD) reference.docx landscape.lua $(BIB) $(CSL) $(FIGURES)
 	@mkdir -p $(OUT)
-	pandoc $< -f markdown -t docx --citeproc --bibliography=$(BIB) --csl=$(CSL) --resource-path=figures --reference-doc=reference.docx --lua-filter=landscape.lua -o $@
+	pandoc $(MD) -f markdown -t docx --citeproc --bibliography=$(BIB) --csl=$(CSL) --resource-path=figures --reference-doc=reference.docx --lua-filter=landscape.lua -o $@
 
 sections: build
 	@echo "pgSz per <w:sectPr>, in document order:"

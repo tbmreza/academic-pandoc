@@ -1,6 +1,9 @@
+Manual style todo:
+- border for raci table & crud table
+
 # MTI Mandat — build & content guide
 
-Pandoc-based DOCX build for `draft.md` (Studi Kasus PT MII — Talent Management,
+Pandoc-based DOCX build for `Edit-Here.md` (Studi Kasus PT MII — Talent Management,
 kerangka DAMA-DMBOK2).
 
 Original file name: DRAFT MANDAT - Tugas 1 v1.1.docx
@@ -10,7 +13,7 @@ Original file name: DRAFT MANDAT - Tugas 1 v1.1.docx
 Requires [pandoc](https://pandoc.org) ≥ 3.x.
 
 ```sh
-make          # or `make build` → out/draft.docx
+make          # or `make build` → out/Mandat_2026SC_06.docx
 make check    # integrity checks (sections, styles, header/footer refs)
 make clean    # remove out/
 ```
@@ -20,7 +23,7 @@ Inspection targets: `make sections`, `make refs`, `make styles`, `make template`
 ## Managing figures
 
 - Put image files in `figures/`.
-- Reference them in `draft.md` with an explicit `figures/` prefix:
+- Reference them in `Edit-Here.md` with an explicit `figures/` prefix:
 
   ```md
   ![](figures/my-figure.png)

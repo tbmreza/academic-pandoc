@@ -1,25 +1,12 @@
 ---
 title: Pemodelan Arsitektur dan Tata Kelola Data Talent Management antara Departemen Delivery dan Departemen Presales
-author: Tb M Reza Handzalah
+subtitle: "Studi Kasus: PT Mitra Integrasi Informatika (MII), berbasis kerangka DAMA-DMBOK2"
+author:
+    - Adryan Rizky Alviano (2606769261) 
+    - Fatimah Zahra (2606845642) 
+    - Sarah H M Siahaan (2606846241) 
+    - Tb M Reza Handzalah (2606769961)
 ---
-
-Studi Kasus: PT Mitra Integrasi Informatika (MII), berbasis kerangka DAMA-DMBOK2.
-
-**Disusun oleh Kelompok 6C**
-
-Adryan Rizky Alviano (2606769261)
-
-Fatimah Zahra (2606845642)
-
-Sarah H M Siahaan (2606846241)
-
-Tb M Reza Handzalah (2606769961)
-
-**Magister Teknologi Informasi**
-
-**Fakultas Ilmu Komputer, Universitas Indonesia**
-
-**Semester Ganjil 2026/2027**
 
 # 1. Executive Summary
 
@@ -40,7 +27,7 @@ Hasil checklist as-is terhadap 11 Knowledge Area DMBOK menunjukkan 4 area berjal
 
 Value chain MII disusun dengan mengadaptasi model Porter [-@porter1985] untuk perusahaan jasa TI, lalu dibaca dengan sudut pandang Ward dan Peppard [-@ward2016] untuk melihat di aktivitas mana informasi dihasilkan dan digunakan.
 
-![](figures/gambar1-dummy.png)
+![](figures/gambar1-information-value-chain.png)
 
 **Gambar 1. Information value chain PT MII dengan fokus talent management (diadaptasi dari Porter, 1985; Ward & Peppard, 2016)**
 
@@ -119,6 +106,8 @@ Tabel 2. **Implikasi bisnis**
 ## 2c. Struktur Inti Organisasi dan Fungsi SI/TI
 
 Sumber: struktur organisasi proyek pada dokumen KOM [@dokumenkoma2025; @dokumenkomb2026] dan observasi anggota kelompok. Nama personel dan klien disamarkan.
+
+![](figures/gambar2-struktur-organisasi.png)
 
 **Gambar 2. Struktur inti organisasi dan fungsi SI/TI terkait talent management (diolah dari Dokumen KOM Proyek A, 2025; Dokumen KOM Proyek B, 2026)**
 
@@ -312,6 +301,8 @@ Tabel 8. **Relasi dan kardinalitas**
 
 *Keterangan notasi: min..max pada ujung entitas kedua (1 = tepat satu, 0..1 = nol atau satu, 0..\* = nol atau banyak, 1..\* = satu atau banyak)* [@dama2017]*. Padanan crow's foot: || tepat satu, o| nol atau satu, o< nol atau banyak, |< satu atau banyak.*
 
+![](figures/gambar3-eerd.png)
+
 Gambar 3. EERD **talent management antara Departemen Presales dan Departemen Delivery (notasi UML)**
 
 *Keterangan: kotak entitas memuat atribut dengan {PK} kunci primer, {FK} kunci asing, dan \[1..\*] atau \[0..\*] atribut multivalued. Angka di ujung garis adalah multiplicity (1..1, 0..1, 0..\*, 1..\*). Garis oranye menandai relasi lintas departemen yang menjadi titik sambung Presales dan Delivery. Segitiga kosong menandai spesialisasi: KARYAWAN dispesialisasi menjadi PRESALES\_PIC, TENAGA\_AHLI, dan PROJECT\_MANAGER dengan constraint {Optional, And}, yaitu karyawan boleh tidak memegang peran tersebut dan boleh memegang lebih dari satu peran; DOKUMEN\_PROYEK dispesialisasi menjadi NDA, PERMINTAAN\_VPN, MOM, dan MATERI\_KOM dengan constraint {Mandatory, Or}, yaitu setiap dokumen proyek tepat satu jenis. Relasi pada tabel relasi dan kardinalitas yang merujuk KARYAWAN dirinci ke subclass yang sesuai. Sumber: rancangan kelompok berdasarkan Dokumen KOM Proyek A [-@dokumenkoma2025], Dokumen KOM Proyek B [-@dokumenkomb2026], dan CV karyawan MII [-@cvkaryawan2026].*
@@ -389,6 +380,8 @@ Integrasi data dianalisis pada pertukaran informasi talent dan dokumen proyek an
 
 ## 5a. Integrasi Data As-Is
 
+![](figures/gambar4-asis-architecture.png)
+
 **Gambar 4. Arsitektur integrasi data as-is pertukaran informasi talent (diolah dari Dokumen KOM Proyek A, 2025; Dokumen KOM Proyek B, 2026)**
 
 Gambar 4 menunjukkan bahwa saat ini tidak ada sistem yang saling terhubung. Informasi talent berpindah secara point-to-point dan manual, dengan Project Manager sebagai penghubung tunggal antara Presales dan tenaga ahli Delivery.
@@ -411,6 +404,8 @@ Gambar 4 menunjukkan bahwa saat ini tidak ada sistem yang saling terhubung. Info
 - Integrasi berupa pertukaran file manual melalui lampiran email dan pesan singkat, tanpa API, sinkronisasi, maupun metadata bersama. Akibatnya terjadi duplikasi versi CV antar site proyek, data pribadi beredar tanpa klasifikasi, dan tidak ada jejak audit atas permintaan maupun pemenuhan talent.
 
 ## 5b. Integrasi Data To-Be
+
+![](figures/gambar5-tobe-architecture.png)
 
 **Gambar 5. Arsitektur integrasi data to-be berbasis Talent Hub pada Microsoft 365 (rancangan kelompok)**
 
